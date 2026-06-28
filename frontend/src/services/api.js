@@ -1,4 +1,4 @@
-const API_BASE = '/api';
+import { API_BASE, API_ROOT, resolveMediaUrl } from '../config/env';
 
 async function request(url, options = {}) {
   let response;
@@ -9,7 +9,9 @@ async function request(url, options = {}) {
     });
   } catch {
     throw new Error(
-      'Cannot reach server. Start the backend with: cd backend && npm run dev'
+      API_ROOT
+        ? 'Cannot reach server. It may be waking up — wait 30s and retry.'
+        : 'Cannot reach server. Start the backend with: cd backend && npm run dev'
     );
   }
 
@@ -76,7 +78,7 @@ export const uploadService = {
     formData.append('image', file);
     let response;
     try {
-      response = await fetch('/api/upload/image', {
+      response = await fetch(`${API_BASE}/upload/image`, {
         method: 'POST',
         body: formData,
       });
@@ -87,6 +89,9 @@ export const uploadService = {
       const error = await response.json().catch(() => ({ message: 'Upload failed' }));
       throw new Error(error.message || 'Upload failed');
     }
-    return response.json();
+    const data = await response.json();
+    return { url: resolveMediaUrl(data.url) };
   },
 };
+
+export { resolveMediaUrl };

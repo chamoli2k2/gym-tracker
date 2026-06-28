@@ -1,4 +1,5 @@
 import { MUSCLE_GROUPS } from './constants';
+import { resolveMediaUrl } from '../config/env';
 
 const MUSCLE_COLORS = {
   chest: ['#6366f1', '#7c3aed', '#4f46e5'],
@@ -59,7 +60,7 @@ export const ULTIMATE_FALLBACK = getMusclePlaceholder('other', 0);
 
 export const getExerciseImage = (exercise) => {
   if (exercise?.imageUrl && isValidImageUrl(exercise.imageUrl)) {
-    return exercise.imageUrl;
+    return resolveMediaUrl(exercise.imageUrl);
   }
   const muscle = exercise?.muscleGroup || 'other';
   const seed = hashString(exercise?.name || 'exercise');

@@ -12,12 +12,30 @@ const errorHandler = require('./middleware/errorHandler');
 
 const app = express();
 
-app.use(cors());
+const corsOrigins = process.env.CLIENT_URL
+  ? process.env.CLIENT_URL.split(',').map((url) => url.trim())
+  : ['http://localhost:5173'];
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin || corsOrigins.includes(origin)) {
+        callback(null, true);
+        return;
+      }
+      callback(new Error(`CORS blocked for origin: ${origin}`));
+    },
+  })
+);
 app.use(express.json({ limit: '10mb' }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Gym Tracker API is running' });
+});
+
+app.get('/', (req, res) => {
+  res.json({ status: 'ok', service: 'GymTrack API' });
 });
 
 app.use('/api/workouts', workoutRoutes);
@@ -31,7 +49,7 @@ app.use(errorHandler);
 const PORT = process.env.PORT || 5001;
 
 connectDB().then(() => {
-  app.listen(PORT, () => {
+  app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running on port ${PORT}`);
   });
 });

@@ -114,3 +114,17 @@ MONGODB_URI=mongodb://127.0.0.1:27017/gym-tracker
 ```
 
 For MongoDB Atlas, replace `MONGODB_URI` with your connection string.
+
+## Deploy online (free)
+
+Host on **Render + MongoDB Atlas** so you can use the app on your phone from anywhere.
+
+See **[DEPLOYMENT.md](./DEPLOYMENT.md)** for step-by-step instructions.
+
+Quick summary:
+1. Allow `0.0.0.0/0` in MongoDB Atlas Network Access
+2. Deploy `backend` as a Render **Web Service** (free)
+3. Deploy `frontend` as a Render **Static Site** (free)
+4. Set `VITE_API_URL` on frontend → your API URL
+5. Set `CLIENT_URL` on backend → your frontend URL
+6. Add to Home Screen on iPhone
