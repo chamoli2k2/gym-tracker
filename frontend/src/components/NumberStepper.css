@@ -1,5 +1,6 @@
 .number-stepper {
   flex: 1;
+  min-width: 0;
 }
 
 .stepper-label {

@@ -54,8 +54,10 @@ body {
 
 .page {
   max-width: 480px;
+  width: 100%;
   margin: 0 auto;
   padding: 16px;
+  overflow-x: hidden;
 }
 
 .page-header {
@@ -132,6 +134,7 @@ body {
   cursor: pointer;
   transition: all 0.15s ease;
   min-height: 48px;
+  max-width: 100%;
   touch-action: manipulation;
 }
 

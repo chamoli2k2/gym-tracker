@@ -137,7 +137,7 @@ export default function PlansView() {
                       onClick={() => handleStart(plan)}
                       disabled={starting === plan._id}
                     >
-                      {starting === plan._id ? 'Starting...' : '▶ Start Workout'}
+                      {starting === plan._id ? '...' : '▶ Start'}
                     </button>
                     <button
                       className="btn btn-secondary btn-sm"

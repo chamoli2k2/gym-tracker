@@ -121,7 +121,7 @@ export default function ExerciseCard({
         </button>
         {firstIncompleteIndex > 0 && (
           <button className="btn btn-ghost btn-sm" onClick={applyWeightToAll}>
-            Same weight all sets
+            Copy weight
           </button>
         )}
       </div>

@@ -210,7 +210,7 @@ export default function AddExerciseModal({ onAdd, onClose }) {
             </div>
 
             <button type="button" className="btn btn-primary btn-block add-confirm-btn" onClick={handleAdd}>
-              Add {setCount} Sets to Workout
+              Add {setCount} Set{setCount !== 1 ? 's' : ''}
             </button>
           </div>
         )}

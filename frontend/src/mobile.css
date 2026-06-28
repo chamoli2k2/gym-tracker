@@ -1,0 +1,295 @@
+/* Small phones (iPhone SE, mini, etc.) */
+
+@media (max-width: 430px) {
+  :root {
+    --nav-height: 64px;
+  }
+
+  .page {
+    padding: 12px;
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .app {
+    overflow-x: hidden;
+  }
+
+  .card,
+  .exercise-card,
+  .workout-hero {
+    padding: 12px;
+    max-width: 100%;
+  }
+
+  .workout-hero h1 {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    word-break: break-word;
+  }
+
+  .hero-top {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-top > div {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .complete-btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px 16px;
+  }
+
+  .stats-grid {
+    gap: 6px;
+  }
+
+  .stat-card {
+    padding: 10px 4px;
+    min-width: 0;
+  }
+
+  .stat-value {
+    font-size: 0.95rem;
+  }
+
+  .stat-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.03em;
+  }
+
+  /* Stepper rows — stack vertically so buttons don't overflow */
+  .set-steppers-row,
+  .config-steppers {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .number-stepper {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .stepper-controls {
+    gap: 6px;
+    padding: 4px 6px;
+    width: 100%;
+  }
+
+  .stepper-btn {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    flex-shrink: 0;
+  }
+
+  .stepper-value {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .stepper-value strong {
+    font-size: 1.15rem;
+  }
+
+  .set-row-active {
+    padding: 12px;
+  }
+
+  /* Footer / action buttons — full width stack */
+  .exercise-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .exercise-footer .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .plan-folder-actions {
+    flex-direction: column;
+  }
+
+  .plan-folder-actions .btn {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .plan-folder-info {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .plan-folder-info h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* Bottom nav — fit 5 tabs on narrow screens */
+  .nav-item {
+    min-width: 0;
+    flex: 1;
+    padding: 5px 2px;
+  }
+
+  .nav-icon {
+    font-size: 1.15rem;
+  }
+
+  .nav-label {
+    font-size: 0.52rem;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .fab {
+    right: max(12px, env(safe-area-inset-right));
+    bottom: calc(var(--nav-height) + var(--safe-bottom) + 12px);
+    width: 52px;
+    height: 52px;
+  }
+
+  /* Add exercise modal */
+  .modal {
+    padding: 16px;
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+    max-width: 100%;
+  }
+
+  .exercise-pick-item {
+    min-width: 0;
+    padding: 10px 12px;
+  }
+
+  .exercise-pick-item > span:not(.pick-check) {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+  }
+
+  .pick-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .set-count-pills {
+    gap: 6px;
+  }
+
+  .set-pill {
+    padding: 10px 6px;
+    min-height: 40px;
+    font-size: 0.95rem;
+  }
+
+  .add-config-panel {
+    padding: 12px;
+  }
+
+  .config-preview strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+  }
+
+  .add-confirm-btn {
+    font-size: 0.9rem;
+    padding: 12px 10px;
+    white-space: normal;
+    line-height: 1.3;
+  }
+
+  .log-set-btn {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .muscle-chip {
+    min-width: 50px;
+    padding: 7px 10px;
+  }
+
+  /* Calendar day detail */
+  .day-plan-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .day-plan-item .btn {
+    width: 100%;
+  }
+
+  .plan-exercise-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .quick-plan-btn {
+    padding: 12px;
+    min-width: 0;
+  }
+
+  .quick-plan-name {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .btn {
+    max-width: 100%;
+  }
+
+  .btn-sm {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+
+  .period-selector {
+    gap: 6px;
+  }
+
+  .period-btn {
+    padding: 8px 6px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra narrow (320px) */
+@media (max-width: 360px) {
+  .stepper-btn {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    font-size: 1.2rem;
+  }
+
+  .stepper-value strong {
+    font-size: 1rem;
+  }
+
+  .stat-value {
+    font-size: 0.85rem;
+  }
+
+  .nav-label {
+    font-size: 0.48rem;
+  }
+}

@@ -6,6 +6,8 @@
   border: 1px solid var(--border);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
   transition: border-color 0.15s;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .exercise-card:hover {
@@ -73,6 +75,7 @@
 
 .exercise-footer {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   align-items: center;
   margin-top: 8px;
