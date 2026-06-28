@@ -1,0 +1,13 @@
+.exercise-image {
+  object-fit: cover;
+  background: var(--bg-elevated);
+}
+
+.exercise-image-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--bg-elevated), var(--bg));
+  color: var(--text-muted);
+  font-size: 1.5rem;
+}

@@ -1,0 +1,46 @@
+.timer-tips h3 {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.timer-tips ul {
+  list-style: none;
+  padding: 0;
+}
+
+.timer-tips li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.timer-tips li:last-child {
+  border-bottom: none;
+}
+
+.preset-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.preset-card {
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  padding: 14px 8px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.preset-value {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.preset-desc {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}

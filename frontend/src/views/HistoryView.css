@@ -1,0 +1,55 @@
+.month-group {
+  margin-bottom: 24px;
+}
+
+.month-title {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+  padding-left: 4px;
+}
+
+.history-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 10px;
+  border: 1px solid var(--border);
+}
+
+.history-date {
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.history-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.history-exercises {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.exercise-tag {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  background: var(--bg);
+  border-radius: 12px;
+  color: var(--text-muted);
+}
+
+.history-actions {
+  display: flex;
+  gap: 8px;
+}

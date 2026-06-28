@@ -1,0 +1,66 @@
+.number-stepper {
+  flex: 1;
+}
+
+.stepper-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.stepper-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  padding: 6px;
+  border: 1px solid var(--border);
+}
+
+.stepper-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: none;
+  background: var(--bg-elevated);
+  color: var(--text);
+  font-size: 1.4rem;
+  font-weight: 300;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stepper-btn:active {
+  background: var(--primary);
+  color: white;
+  transform: scale(0.95);
+}
+
+.stepper-value {
+  min-width: 64px;
+  text-align: center;
+}
+
+.stepper-value strong {
+  font-size: 1.35rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.stepper-value small {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-top: 1px;
+}

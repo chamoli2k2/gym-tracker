@@ -1,0 +1,188 @@
+.add-exercise-modal {
+  max-height: 92dvh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: calc(16px + var(--safe-bottom));
+}
+
+.add-exercise-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.add-exercise-header h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.exercise-search {
+  margin-bottom: 12px;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+
+.muscle-chips {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  scrollbar-width: none;
+}
+
+.muscle-chips::-webkit-scrollbar {
+  display: none;
+}
+
+.muscle-chip {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-muted);
+  font-size: 0.65rem;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 56px;
+}
+
+.muscle-chip span:first-child {
+  font-size: 1.1rem;
+}
+
+.muscle-chip.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.exercise-pick-list {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 200px;
+  margin-bottom: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.exercise-pick-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--bg);
+  border: none;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+}
+
+.exercise-pick-item:last-child {
+  border-bottom: none;
+}
+
+.exercise-pick-item.selected {
+  background: rgba(99, 102, 241, 0.12);
+}
+
+.exercise-pick-item.custom-pick {
+  color: var(--primary-hover);
+}
+
+.pick-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.pick-check {
+  margin-left: auto;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.add-config-panel {
+  background: var(--bg);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 14px;
+  margin-top: auto;
+}
+
+.config-preview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.config-preview-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+}
+
+.config-preview strong {
+  font-size: 1rem;
+}
+
+.config-sets-row {
+  margin-bottom: 14px;
+}
+
+.config-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.set-count-pills {
+  display: flex;
+  gap: 8px;
+}
+
+.set-pill {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.set-pill.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.config-steppers {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.add-confirm-btn {
+  font-size: 1rem;
+  min-height: 52px;
+}

@@ -1,0 +1,93 @@
+.plan-editor-modal {
+  max-height: 90dvh;
+}
+
+.color-picker {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.color-swatch {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.color-swatch.active {
+  border-color: white;
+  transform: scale(1.1);
+}
+
+.plan-exercises-section {
+  margin-bottom: 16px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.hint-text {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 20px;
+}
+
+.plan-exercise-block {
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid var(--border);
+}
+
+.plan-exercise-header {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.plan-exercise-header input,
+.plan-exercise-header select {
+  min-height: 40px;
+  font-size: 0.9rem;
+}
+
+.plan-sets-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.plan-set-row {
+  display: grid;
+  grid-template-columns: 28px 1fr 1fr;
+  gap: 8px;
+  align-items: center;
+}
+
+.plan-set-row .set-num {
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.plan-set-row input {
+  min-height: 38px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.add-set-btn {
+  align-self: flex-start;
+  margin-top: 4px;
+}

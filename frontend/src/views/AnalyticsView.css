@@ -1,0 +1,76 @@
+.period-selector {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.period-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.period-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.chart-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.no-data {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 30px 0;
+  font-size: 0.9rem;
+}
+
+.records-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.record-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.record-item:last-child {
+  border-bottom: none;
+}
+
+.record-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.record-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.record-weight {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.analytics-view .card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}

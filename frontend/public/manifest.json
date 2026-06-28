@@ -1,0 +1,10 @@
+{
+  "name": "GymTrack",
+  "short_name": "GymTrack",
+  "description": "Track your gym workouts, sets, reps, and progress",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#6366f1",
+  "orientation": "portrait"
+}
