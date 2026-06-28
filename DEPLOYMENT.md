@@ -47,7 +47,7 @@ Use this guide to host the app online so you can open it on your iPhone from any
    |-----|-------|
    | `NODE_ENV` | `production` |
    | `MONGODB_URI` | your Atlas connection string |
-   | `CLIENT_URL` | *(add after Step 3 — your frontend URL)* |
+   | `CLIENT_URL` | `https://gym-tracker-frontend-z5yd.onrender.com` *(your frontend URL, no trailing slash)* |
 
 6. Click **Create Web Service**
 7. Copy your API URL, e.g. `https://gym-tracker-api.onrender.com`

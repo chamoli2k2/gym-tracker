@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const connectDB = require('./config/db');
+const { corsOptions, getAllowedOrigins } = require('./config/cors');
 const workoutRoutes = require('./routes/workoutRoutes');
 const analyticsRoutes = require('./routes/analyticsRoutes');
 const templateRoutes = require('./routes/templateRoutes');
@@ -12,21 +13,7 @@ const errorHandler = require('./middleware/errorHandler');
 
 const app = express();
 
-const corsOrigins = process.env.CLIENT_URL
-  ? process.env.CLIENT_URL.split(',').map((url) => url.trim())
-  : ['http://localhost:5173'];
-
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      if (!origin || corsOrigins.includes(origin)) {
-        callback(null, true);
-        return;
-      }
-      callback(new Error(`CORS blocked for origin: ${origin}`));
-    },
-  })
-);
+app.use(cors(corsOptions));
 app.use(express.json({ limit: '10mb' }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
@@ -51,5 +38,6 @@ const PORT = process.env.PORT || 5001;
 connectDB().then(() => {
   app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running on port ${PORT}`);
+    console.log(`CORS allowed origins: ${getAllowedOrigins().join(', ')}`);
   });
 });
