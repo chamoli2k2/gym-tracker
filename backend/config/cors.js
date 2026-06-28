@@ -23,6 +23,9 @@ const getAllowedOrigins = () => {
   return [...new Set([...DEFAULT_ORIGINS, ...fromEnv])];
 };
 
+const isProduction =
+  process.env.NODE_ENV === 'production' || process.env.RENDER === 'true';
+
 const isOriginAllowed = (origin) => {
   const normalized = normalizeOrigin(origin);
   const allowed = getAllowedOrigins();
@@ -31,8 +34,8 @@ const isOriginAllowed = (origin) => {
     return true;
   }
 
-  // Production: auto-allow Render-hosted frontends (free tier deploys)
-  if (process.env.NODE_ENV === 'production' && RENDER_ORIGIN.test(normalized)) {
+  // Auto-allow Render-hosted frontends when running on Render
+  if (isProduction && RENDER_ORIGIN.test(normalized)) {
     return true;
   }
 
@@ -53,7 +56,7 @@ const corsOptions = {
 
     console.warn(
       `CORS blocked origin: ${origin}. Allowed: ${getAllowedOrigins().join(', ')}` +
-        (process.env.NODE_ENV === 'production' ? ' (+ *.onrender.com)' : '')
+        (isProduction ? ' (+ *.onrender.com)' : '')
     );
     callback(null, false);
   },
